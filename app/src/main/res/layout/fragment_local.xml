@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="지역별검색"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text1"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강남"
+            android:layout_below="@+id/text1"
+            android:layout_toStartOf="@+id/text1"
+            android:id="@+id/kangnam_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강북"
+            android:layout_below="@+id/text1"
+            android:layout_toRightOf="@+id/kangnam_button"
+            android:id="@+id/kangbuk_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강서"
+            android:layout_below="@+id/kangnam_button"
+            android:layout_toStartOf="@+id/text1"
+            android:id="@+id/kangseo_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강동"
+            android:id="@+id/kangdong_button"
+            android:layout_below="@+id/kangbuk_button"
+            android:layout_toRightOf="@+id/kangseo_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전체"
+            android:id="@+id/all_local_button"
+            android:layout_below="@+id/kangseo_button"
+            android:layout_alignStart="@+id/kangseo_button"
+            android:layout_alignEnd="@+id/kangdong_button" />
+    </RelativeLayout>
+
+</RelativeLayout>

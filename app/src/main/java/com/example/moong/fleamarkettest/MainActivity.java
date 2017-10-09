@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     Fragment1 fragment1;
+    Fragment_Local fragment_local;
+    Fragment_Thema fragment_thema;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         fragment1 = new Fragment1();
+        fragment_thema = new Fragment_Thema();
+        fragment_local = new Fragment_Local();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
 
         TabLayout tabs = (TabLayout)findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("테마별검색"));
         tabs.addTab(tabs.newTab().setText("위치별검색"));
+        tabs.setSelected(false);
 
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -40,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
                 int position = tab.getPosition();
                 Fragment selected = null;
                 if(position==0){
-                    selected = fragment1;
+                    selected = fragment_thema;
+                }
+                if(position==1)
+                {
+                    selected = fragment_local;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, selected).commit();
 
