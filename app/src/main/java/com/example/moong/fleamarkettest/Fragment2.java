@@ -25,6 +25,7 @@ public class Fragment2 extends Fragment{
         TabLayout tabs = (TabLayout) view.findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("상세보기"));
         tabs.addTab(tabs.newTab().setText("댓글"));
+        //테스트
 
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
