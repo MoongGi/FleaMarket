@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#03c92b</item> <!--아예 디바이스탭 바꿔버림;;;; -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
