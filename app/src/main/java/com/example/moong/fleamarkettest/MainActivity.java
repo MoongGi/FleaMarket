@@ -1,11 +1,14 @@
 package com.example.moong.fleamarkettest;
 
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import static android.support.design.R.styleable.TabLayout;
 
@@ -16,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
     Fragment_Local fragment_local;
     Fragment_Thema fragment_thema;
+    RelativeLayout local_activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 int position = tab.getPosition();
                 Fragment selected = null;
                 if(position==0){
-                    selected = fragment_thema;
+                    //selected = fragment_thema;
+                    Drawable alpha1;
+                    local_activity = (RelativeLayout)findViewById(R.id.local_activity);
+                    alpha1 = local_activity.getBackground();
+                    alpha1.setAlpha(100); //투명도조절
+                    local_activity.setVisibility(View.VISIBLE);
                 }
                 if(position==1)
                 {

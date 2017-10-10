@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#969292"
+        android:visibility="gone"
+        android:id="@+id/local_activity">
+        <include
+            android:id="@+id/main_local_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            layout="@layout/fragment_local"/>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageview3"
                 android:background="@drawable/kbcard"/>
+
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>
