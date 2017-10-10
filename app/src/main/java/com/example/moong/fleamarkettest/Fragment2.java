@@ -26,6 +26,7 @@ public class Fragment2 extends Fragment{
         tabs.addTab(tabs.newTab().setText("상세보기"));
         tabs.addTab(tabs.newTab().setText("댓글"));
         //테스트 01.최종
+        //다시전송
 
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
